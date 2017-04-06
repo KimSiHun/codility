@@ -1,10 +1,10 @@
-package org.shkim.codility.lessons;
+package org.shkim.codility.lesson.iterations;
 
 /**
  * 
  * @author parad write gap of binary count 0 besides 1
  */
-public abstract class BinaryGap
+public class BinaryGap
 {
 	public static int binary_get(int N)
 	{

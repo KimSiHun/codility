@@ -1,4 +1,4 @@
-package org.shkim.codility.lessons;
+package org.shkim.codility.lesson.timecomplexity;
 
 public class PermMissingElem
 {

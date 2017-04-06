@@ -1,4 +1,4 @@
-package org.shkim.codility.lessons;
+package org.shkim.codility.lesson.arrays;
 
 public class CyclicRotation
 {
