@@ -1,6 +1,6 @@
 package org.shkim.codility.main;
 
-import org.shkim.codility.lesson.countingelement.MissingInteger;
+import org.shkim.codility.lesson.countingelement.FrogRiverOne;
 
 public class Main
 {
@@ -8,9 +8,9 @@ public class Main
 	public static void main(String[] args)
 	{
 
-		int A[] = {1,3,1,4,2,3,5,4};
+		int A[] = {1};
 
-		int t = MissingInteger.solution(A);
+		int t = FrogRiverOne.solution(1,A);
 		System.out.println(t);
 	}
 }
