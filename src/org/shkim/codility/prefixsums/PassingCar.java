@@ -8,8 +8,8 @@ public class PassingCar
 
 		// A[i] == 0 east ==1 west
 
-		int east = 0;
-		int passingCar = 0;
+		long east = 0;
+		long passingCar = 0;
 
 		for (int i = 0; i < A.length; i++)
 		{
@@ -21,17 +21,17 @@ public class PassingCar
 				passingCar += east;
 			}
 		}
-		
+
 		int result = 0;
-		
-		if (passingCar > 1000000000)
+
+		if (passingCar > 1000000000L)
 		{
 			result = -1;
-		}else{
-			result = passingCar;
+		} else
+		{
+			result = (int) passingCar;
 		}
 
-		
 		return result;
 	}
 
