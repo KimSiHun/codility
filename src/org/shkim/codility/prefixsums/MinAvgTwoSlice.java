@@ -29,7 +29,7 @@ public class MinAvgTwoSlice {
 		int Q = 0;
 		int sum = 0;
 		String set[] = new String[2];
-		int temp_result[] = new int[T];
+		String avg[] = new String[T];
 		for (int i = 0; i < temp.length; i++) {
 			set = temp[i].split(",");
 			P = Integer.parseInt(set[0]);
@@ -38,15 +38,13 @@ public class MinAvgTwoSlice {
 			for (int j = P; j < Q + 1; j++) {
 				sum += A[j];
 			}
-			temp_result[i] = sum / (Q+1-P);
+			avg[i] = P + "," + sum / (Q + 1 - P);
 		}
-
-		// 계산 결과값 담아놓을
-
-		for (int i = 0; i < N; i++) {
-
+		
+		for (int i = 0; i < avg.length; i++) {
+			System.out.println(avg[i]);
 		}
-
+		
 		return 0;
 	}
 
