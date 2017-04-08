@@ -1,7 +1,7 @@
 package org.shkim.codility.main;
 
-import org.shkim.codility.prefixsums.GenomicRangeQuery;
-import org.shkim.codility.prefixsums.PassingCar;
+import org.shkim.codility.prefixsums.GenomicRangeQuery2;
+import org.shkim.codility.prefixsums.MinAvgTwoSlice;
 
 public class Main
 {
@@ -9,15 +9,10 @@ public class Main
 	public static void main(String[] args)
 	{
 
-		String S = "CAGCCTA";
-		int P[] = { 2, 5, 0 };
-		int Q[] = { 4, 5, 6 };
+		int A[] = {4,2,2,5,1,5,8};
 
-		int t[] = GenomicRangeQuery.solution(S, P, Q);
+		int t = MinAvgTwoSlice.solution(A);
 
-		for (int i = 0; i < t.length; i++)
-		{
-			System.out.println(t[i]);
-		}
+		System.out.println(t);
 	}
 }
