@@ -1,10 +1,9 @@
 package org.shkim.codility.prefixsums;
 
-
 /**
  * 
- *  https://codility.com/demo/results/trainingRC3F5N-DZ3/
- *  has 60 % O(N **2)
+ * https://codility.com/demo/results/trainingRC3F5N-DZ3/ has 60 % O(N **2)
+ * 
  * @author parad
  *
  */
@@ -21,7 +20,6 @@ public class MinAvgTwoSlice {
 		double slice_avg = (A[0] + A[1]) / 2;
 		int slice_position = 0;
 
-
 		int sum = 0;
 		double avg = 0;
 		int t = 2;
@@ -31,10 +29,10 @@ public class MinAvgTwoSlice {
 			sum = A[i];
 			for (int j = i + 1; j < N; j++) {
 				sum += A[j];
-				avg = (double) sum/ t;
-				
+				avg = (double) sum / t;
+
 				t++;
-				
+
 				if (slice_avg > avg) {
 					slice_avg = avg;
 					slice_position = i;
