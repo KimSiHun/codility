@@ -1,5 +1,13 @@
 package org.shkim.codility.prefixsums;
 
+
+/**
+ * 
+ *  https://codility.com/demo/results/trainingRC3F5N-DZ3/
+ *  has 60 % O(N **2)
+ * @author parad
+ *
+ */
 public class MinAvgTwoSlice {
 
 	public static int solution(int A[]) {
@@ -10,42 +18,31 @@ public class MinAvgTwoSlice {
 		// N is A.length
 		int N = A.length;
 
-		// 나올 수 있는 가정? count
-		int T = (N - 1) * (N) / 2;
-		String temp[] = new String[T];
-		int t = 0;
+		double slice_avg = (A[0] + A[1]) / 2;
+		int slice_position = 0;
 
-		for (int i = 0; i < N - 1; i++) {
-			for (int j = 1; j < N; j++) {
-				if (i >= j) {
-					continue;
-				}
-				temp[t] = i + "," + j;
-				t++;
-			}
-		}
 
-		int P = 0;
-		int Q = 0;
 		int sum = 0;
-		String set[] = new String[2];
-		String avg[] = new String[T];
-		for (int i = 0; i < temp.length; i++) {
-			set = temp[i].split(",");
-			P = Integer.parseInt(set[0]);
-			Q = Integer.parseInt(set[1]);
+		double avg = 0;
+		int t = 2;
+		for (int i = 0; i < N - 1; i++) {
 			sum = 0;
-			for (int j = P; j < Q + 1; j++) {
+			t = 2;
+			sum = A[i];
+			for (int j = i + 1; j < N; j++) {
 				sum += A[j];
+				avg = (double) sum/ t;
+				
+				t++;
+				
+				if (slice_avg > avg) {
+					slice_avg = avg;
+					slice_position = i;
+				}
 			}
-			avg[i] = P + "," + sum / (Q + 1 - P);
 		}
-		
-		for (int i = 0; i < avg.length; i++) {
-			System.out.println(avg[i]);
-		}
-		
-		return 0;
+
+		return slice_position;
 	}
 
 }
