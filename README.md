@@ -8,3 +8,6 @@ clear lesson 3 Time Complexity
 
 2017-04-07
 clear lesson 4 Counting Element
+
+2017-04-10
+clear lesson 5 Prefix sums
