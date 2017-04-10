@@ -1,6 +1,6 @@
 package org.shkim.codility.main;
 
-import org.shkim.codility.prefixsums.MinAvgTwoSlice2;
+import org.shkim.codility.sorting.Triangle;
 
 public class Main
 {
@@ -8,9 +8,9 @@ public class Main
 	public static void main(String[] args)
 	{
 
-		int A[] = {4,2,2,5,1,5,8};
+		int A[] = { 10,2,5,1,8,20 };
 
-		int t = MinAvgTwoSlice2.solution(A);
+		int t = Triangle.solution(A);
 
 		System.out.println(t);
 	}
