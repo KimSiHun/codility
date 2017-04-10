@@ -1,7 +1,6 @@
 package org.shkim.codility.main;
 
-import org.shkim.codility.prefixsums.GenomicRangeQuery2;
-import org.shkim.codility.prefixsums.MinAvgTwoSlice;
+import org.shkim.codility.prefixsums.MinAvgTwoSlice2;
 
 public class Main
 {
@@ -11,7 +10,7 @@ public class Main
 
 		int A[] = {4,2,2,5,1,5,8};
 
-		int t = MinAvgTwoSlice.solution(A);
+		int t = MinAvgTwoSlice2.solution(A);
 
 		System.out.println(t);
 	}
