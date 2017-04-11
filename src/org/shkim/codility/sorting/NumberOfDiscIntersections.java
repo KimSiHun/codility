@@ -25,6 +25,12 @@ public class NumberOfDiscIntersections
 		int temp[] = Arrays.copyOf(A, N);
 		Arrays.sort(temp);
 
+		for (int i = 0; i < temp.length; i++)
+		{
+			System.out.println(i+" - "+temp[i] + " "+ A[i]+ " ");
+		}
+		
+		
 		int big_position = temp[N - 1];
 
 		int cnt = 0;

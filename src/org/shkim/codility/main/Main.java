@@ -1,6 +1,6 @@
 package org.shkim.codility.main;
 
-import org.shkim.codility.demo.Demo;
+import org.shkim.codility.stacksandqueues.StoneWalls;
 
 public class Main
 {
@@ -8,9 +8,9 @@ public class Main
 	public static void main(String[] args)
 	{
 
-		int A[] = { -1, 3, -4, 5, 1, -6, 2, 1 };
+		int H[] = {8,8,5,7,9,8,7,4,8};
 
-		int t = Demo.solution(A);
+		int t = StoneWalls.solution(H);
 
 		System.out.println(t);
 	}

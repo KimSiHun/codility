@@ -6,7 +6,7 @@ public class Demo
 	{
 
 		int N = A.length;
-		
+
 		long in_left = 0;
 		long in_right = 0;
 
@@ -23,21 +23,21 @@ public class Demo
 				}
 			}
 
-			if (i != N-1)
+			if (i != N - 1)
 			{
-				
-				for (int j = i + 1; j < N; j++)				
+
+				for (int j = i + 1; j < N; j++)
 				{
 					in_right += A[j];
-				}				
+				}
 			}
-			
+
 			if (in_left == in_right)
 			{
 				return i;
-			}	
+			}
 		}
-		
+
 		return -1;
 	}
 }
