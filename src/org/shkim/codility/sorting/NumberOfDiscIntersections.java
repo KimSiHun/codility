@@ -4,7 +4,8 @@ import java.util.Arrays;
 
 /**
  * 
- * http://stackoverflow.com/questions/14042447/counting-disk-intersections-using-treeset
+ * https://codility.com/demo/results/trainingYA6DMP-EUY/ 81% arih , timeout
+ * 
  * @author parad
  *
  */
@@ -15,23 +16,41 @@ public class NumberOfDiscIntersections
 
 		int N = A.length;
 
-		int left[] = new int[N];
-		int right[] = new int[N];
+		// set exception
+		if (A == null || N < 2)
+		{
+			return 0;
+		}
 
-		int max_length = 100000;
-		
+		int temp[] = Arrays.copyOf(A, N);
+		Arrays.sort(temp);
+
+		int big_position = temp[N - 1];
+
+		int cnt = 0;
+
 		for (int i = 0; i < N; i++)
 		{
-			left[i] = i - A[i];
-			right[i] = i + A[i] - max_length;
-		}
-		
-		Arrays.sort(left);
-		Arrays.sort(right);
+			for (int j = i + 1; j < N; j++)
+			{
+				if (j - big_position > i + A[i])
+				{
+					break;
+				}
 
-		
-		
-		
-		return 0;
+				if (j - A[j] <= i + A[i])
+				{
+					cnt++;
+				}
+
+				// exception
+				if (cnt > 10000000)
+				{
+					return -1;
+				}
+			}
+		}
+
+		return cnt;
 	}
 }
