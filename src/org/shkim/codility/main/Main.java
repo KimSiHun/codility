@@ -1,5 +1,6 @@
 package org.shkim.codility.main;
 
+import org.shkim.codility.leader.EquiLeader;
 import org.shkim.codility.maximumsliceproplem.MaxDoubleSliceSum;
 
 public class Main
@@ -7,9 +8,9 @@ public class Main
 
 	public static void main(String[] args)
 	{
-		int A[] = {3,2,6,-1,4,5,-1,2};
+		int A[] = {4,4,2,5,3,4,4,4};
 		
-		int t = MaxDoubleSliceSum.solution(A);
+		int t = EquiLeader.solution(A);
 		
 		System.out.println(t);
 	
