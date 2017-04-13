@@ -10,6 +10,11 @@ public class Test
 	{
 
 		int N = A.length;
+
+		if (N ==0)
+		{
+			return 0;
+		}
 		
 		Arrays.sort(A);
 
@@ -18,36 +23,21 @@ public class Test
 		{
 			set.add(A[i]);
 		}
-		
-		int size = set.size();
-		
+
 		int checker = 0;
 		int cnt = 0;
-		
-		int result = 0;
-		
-		for (int i = 0; i < N-1; i++)
+
+		for (int i = 0; i < N; i++)
 		{
 			checker = A[i];
-			if (i == 0)
+			if (set.contains(checker))
 			{
+				set.remove(checker);
 				cnt++;
-			}else{
-				if (checker != A[i+1])
-				{
-					cnt++;
-				}
 			}
-			
-			if (cnt == size)
-			{
-				result = i;
-				break;
-			}
-			
 		}
-		
-		return result;
+
+		return cnt + 1;
 	}
 
 	public static void main(String[] args)
