@@ -1,4 +1,4 @@
-package org.shkim.codility.demo;
+package org.shkim.codility.test;
 
 /**
  * 
