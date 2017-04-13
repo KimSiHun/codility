@@ -8,6 +8,15 @@ public class NonDecending
 
 		int N = A.length;
 
+		if (N == 0)
+		{
+			return false;
+		}else if(N == 1)
+		{
+			return true;
+		}
+		
+		
 		int cnt = 0;
 		int temp = 0;
 
@@ -35,7 +44,7 @@ public class NonDecending
 
 	public static void main(String[] args)
 	{
-		int A[] = { 1, 5, 3, 3, 7 };
+		int A[] = { 1, 3, 5, 3, 4 };
 		System.out.println(solution(A));
 	}
 }
