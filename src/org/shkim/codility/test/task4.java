@@ -2,7 +2,7 @@ package org.shkim.codility.test;
 
 import java.util.HashSet;
 
-public class Test
+public class task4
 {
 
 	private static int solution(int A[])
