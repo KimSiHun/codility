@@ -23,10 +23,10 @@ public class Demo
 
 		if (N == 1)
 		{
-			return 1;
+			return 0;
 		} else if (N == 0)
 		{
-			return 0;
+			return -1;
 		}
 
 		long in_left = 0;
