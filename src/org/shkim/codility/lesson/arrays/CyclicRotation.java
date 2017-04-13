@@ -41,5 +41,4 @@ public class CyclicRotation
 
 		return A;
 	}
-
 }

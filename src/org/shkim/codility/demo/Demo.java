@@ -1,5 +1,12 @@
 package org.shkim.codility.demo;
 
+
+/**
+ * 
+ * https://codility.com/demo/results/demoUMKAHB-74G/ 64%
+ * @author parad
+ *
+ */
 public class Demo
 {
 	public static int solution(int A[])
