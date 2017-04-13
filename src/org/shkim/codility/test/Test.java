@@ -10,6 +10,12 @@ public class Test
 
 		int N = A.length;
 
+		if (N == 1)
+		{
+			return 1;
+		}
+		
+		
 		HashSet<Integer> set = new HashSet<>();
 		for (int i = 0; i < N; i++)
 		{
