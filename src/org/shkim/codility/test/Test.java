@@ -1,6 +1,5 @@
 package org.shkim.codility.test;
 
-import java.util.Arrays;
 import java.util.HashSet;
 
 public class Test
@@ -11,33 +10,41 @@ public class Test
 
 		int N = A.length;
 
-		if (N ==0)
-		{
-			return 0;
-		}
-		
-		Arrays.sort(A);
-
 		HashSet<Integer> set = new HashSet<>();
 		for (int i = 0; i < N; i++)
 		{
 			set.add(A[i]);
 		}
 
-		int checker = 0;
-		int cnt = 0;
+		HashSet<Integer> copy;
+
+		int temp = Integer.MAX_VALUE;
 
 		for (int i = 0; i < N; i++)
 		{
-			checker = A[i];
-			if (set.contains(checker))
+			copy = new HashSet<>();
+
+			copy.addAll(set);
+
+			for (int j = i; j < N; j++)
 			{
-				set.remove(checker);
-				cnt++;
+				if (copy.contains(A[j]))
+				{
+					copy.remove(A[j]);
+				}
+
+				if (copy.isEmpty())
+				{
+					if (j - i + 1 < temp)
+					{
+						temp = j - i + 1;
+					}
+					break;
+				}
 			}
 		}
 
-		return cnt + 1;
+		return temp;
 	}
 
 	public static void main(String[] args)
