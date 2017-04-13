@@ -24,11 +24,10 @@ public class NonDecending
 				}
 				cnt++;
 			}
-		}
-
-		if (cnt > 1)
-		{
-			return false;
+			if (cnt > 1)
+			{
+				return false;
+			}
 		}
 
 		return true;
