@@ -6,14 +6,14 @@ import java.util.HashSet;
 public class task4
 {
 
-
-
 	private static int solution2(int A[])
 	{
 
 		int N = A.length;
-
-		if (N == 1)
+		if (N == 0)
+		{
+			return 0;
+		} else if (N == 1)
 		{
 			return 1;
 		}
@@ -120,7 +120,7 @@ public class task4
 	public static void main(String[] args)
 	{
 
-		int A[] = { 7, 3, 7, 3, 1, 3, 4, 1 };
+		int A[] = {};
 		System.out.println(solution2(A));
 	}
 }
