@@ -6,6 +6,8 @@ import java.util.HashSet;
 public class task4
 {
 
+
+
 	private static int solution2(int A[])
 	{
 
@@ -57,7 +59,7 @@ public class task4
 
 			Arrays.sort(temp);
 
-			minus = temp[key_size-1] - temp[0];
+			minus = temp[key_size - 1] - temp[0];
 
 			if (temp[0] != -1 && (minus + 1) < result)
 			{
