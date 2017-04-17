@@ -1,7 +1,6 @@
 package org.shkim.codility.main;
 
 import org.shkim.codility.leader.EquiLeader;
-import org.shkim.codility.maximumsliceproplem.MaxDoubleSliceSum;
 
 public class Main
 {

@@ -1,9 +1,5 @@
 package org.shkim.codility.leader;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Stack;
-
 /**
  * https://codility.com/demo/results/trainingFTV7XV-498/ 22%
  * 
@@ -13,6 +9,12 @@ import java.util.Stack;
 
 public class EquiLeader
 {
+	public static void main(String[] args)
+	{
+		int A[] = { 4, 3, 4, 4, 4, 2 };
+		solution(A);
+	}
+
 	public static int solution(int A[])
 	{
 
@@ -20,43 +22,29 @@ public class EquiLeader
 
 		int cnt = 0;
 
-		HashSet<Integer> left_key;
-		HashSet<Integer> right_key;
-
-		HashMap<Integer, Integer> left_map;
-		HashMap<Integer, Integer> right_map;
+		StringBuilder sb = new StringBuilder();
 
 		for (int i = 0; i < N; i++)
 		{
-			left_key = new HashSet<>();
-			right_key = new HashSet<>();
-			for (int j = 0; j < i + 1; j++)
-			{
-				left_key.add(A[j]);
-			}
-
-			left_map = new HashMap<>();
-			for (int j = 0; j < i + 1; j++)
-			{
-				if (left_map.isEmpty())
-				{
-					left_map.put(A[j], 1);
-				} else
-				{
-					if (null == left_map.get(A[j]))
-					{
-						left_map.put(A[j], 1);
-					} else
-					{
-						left_map.put(A[j], left_map.get(A[j]) + 1);
-					}
-				}
-			}
-			
-			
-			
+			sb.append(A[i]);
 		}
-		
+
+		String temp = new String(sb);
+
+		for (int i = 0; i < temp.length() - 1; i++)
+		{
+			String left = temp.substring(0, i + 1);
+			String right = temp.substring(left.length());
+
+			char left_temp[] = left.toCharArray();
+			char right_temp[] = right.toCharArray();
+
+			int left_half = left.length() / 2;
+			int right_half = right.length() / 2;
+
+			System.out.println(left_temp.toString() + " " + right_temp.toString() + " " + " " + left_half + " " + right_half);
+
+		}
 
 		return cnt;
 	}

@@ -19,17 +19,13 @@ public class task4
 		}
 
 		HashSet<String> keys = new HashSet<>();
-		for (int i = 0; i < N; i++)
-		{
-			keys.add(String.valueOf(A[i]));
-		}
-		int key_size = keys.size();
-
 		StringBuilder sb = new StringBuilder();
 		for (int i = 0; i < N; i++)
 		{
+			keys.add(String.valueOf(A[i]));
 			sb.append(A[i]);
 		}
+		int key_size = keys.size();
 
 		String line = new String(sb);
 		String checker = null;
@@ -117,6 +113,11 @@ public class task4
 		return temp;
 	}
 
+	public void test(){
+		int A[] = {1,1,1,1,1};
+		solution(A);
+	}
+	
 	public static void main(String[] args)
 	{
 
