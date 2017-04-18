@@ -2,7 +2,7 @@ package org.shkim.codility.maximumsliceproplem;
 
 public class MaxDoubleSliceSum
 {
-	private static int double_slice(int A[], int X, int Y, int Z)
+	public static int double_slice(int A[], int X, int Y, int Z)
 	{
 		int sum = 0;
 		for (int i = X + 1; i < Z; i++)
